@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import CustomChart from '../../utils/CustomChart';
+import { CustomChart } from '../../utils';
 import {
     StyledWrapper,
     StyledChartContainer,
@@ -21,7 +21,7 @@ const Charts = ({langData, repoData}) => {
                 name: lang.label,
                 y: lang.value
             }
-        });
+        })
 
         setLangChartData(customData);
 
@@ -30,21 +30,47 @@ const Charts = ({langData, repoData}) => {
                 ({color}) => color
             );
             // const { chartType, labels, data, title, backgroundColor, borderColor, axes, legend, id } = config;
-            const borderColor = langData.map(lang => lang.color);
-            const axes = false;
             const legend = true;
-            const title = "Top Languages"
-            const config = {chartType, customData, title, backgroundColor, borderColor, axes, legend };
+            const config = {chartType, customData, backgroundColor, legend };
             setLangConfig(config);
         }
     };
+
+    // Create the most starred repos chart
+    const [starChartData, setStarChartData] = useState(null);
+    const [starConfig, setStarConfig] = useState(null);
+    const initStarChart = () => {
+        const LIMIT = 5;
+        const sortProperty = "stargazers_count";
+        const mostStarredRepos = repoData.filter(repo => !repo.fork)
+                                         .sort((a, b) => b[sortProperty] - a[sortProperty])
+                                         .slice(0, LIMIT)
+        const labels = mostStarredRepos.map(repo => repo.name);
+        const data = mostStarredRepos.map(repo => repo[sortProperty])
+        const customData = mostStarredRepos.map(repo => {
+            return {
+                name: repo.name,
+                data: [repo[sortProperty]]
+            }
+        })
+        setStarChartData(customData);
+        
+        if(data.length > 0) {
+            const chartType = "column";
+            const xAxis = "category";
+            const yAxis = "Total star"
+            const legend = false;
+            const config = { chartType, labels, customData, legend, xAxis, yAxis }
+            setStarConfig(config);
+        }
+    }
 
     useEffect(() => {
         if(langData.length && repoData.length) {
             console.log(langData);
             console.log(repoData);
             initLangChart();
-
+            initStarChart();
         }
     }, [])
 
