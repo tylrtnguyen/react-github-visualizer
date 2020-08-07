@@ -17,7 +17,7 @@ const UserPage = props => {
                 <UserInfo userData={mockUserData} />
             </StyledSideBar>
             <StyledContent>
-                <Charts langData={mockLangData} repoData={mockReposData} />
+                <Charts langData={mockLangData} repoData={mockReposData} username={username} />
             </StyledContent>
         </StyledContainer>
     )
