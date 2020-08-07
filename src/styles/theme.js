@@ -2,7 +2,7 @@ const theme = {
     colors: {
         white: '#FFFFFF',
         background: '#24292E',
-        disabled: '#cccccc',
+        disabled: '#CCCCCC',
         charcoal: '#121212',
         green: '#17FFD1',
         red: '#FF1744',
@@ -20,7 +20,9 @@ const theme = {
         copyright: '0.7rem'
     },
 
-    borderRadius: '10px'
+    borderRadius: '10px',
+    transition: 'all 0.2s ease-in-out',
+    boxShadow: '2px 2px 4px 0px rgba(150,141,150,1)'
 }
 
 export default theme;

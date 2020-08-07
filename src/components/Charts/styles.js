@@ -19,10 +19,10 @@ export const StyledChartContainer = styled.div`
     background-color: ${colors.white};
     min-width: 300px;
     padding: 1rem;
-    margin: 20px;
-    max-width: 500px;
+    margin: 0.8rem 2.5rem;
+    max-width: 400px;
     border-radius: ${theme.borderRadius};
-    box-shadow: 5px 5px 10px 0px rgba(150,141,150,1);
+    box-shadow: ${theme.boxShadow};
     ${media.phablet`
         min-width: 300px;
         max-width: 400px;
@@ -37,7 +37,7 @@ export const StyledHeader = styled.div`
     ${mixins.flexCenter};
     h2 {
         padding: 0.3rem;
-        font-size: ${typeScale.h4};
+        font-size: ${typeScale.h5};
     }
 `;
 

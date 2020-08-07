@@ -13,6 +13,11 @@ const mixins = {
         display: flex;
         justify-content: space-between;
     `,
+    ellipsis: css`
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+   `,
     button: css`
         display: flex;
         justify-content: center;

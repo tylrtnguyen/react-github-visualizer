@@ -7,6 +7,7 @@ export const StyledWrapper = styled.div`
     flex-direction: column;
     margin-bottom: 30px;
     text-align: center;
+    padding: 0.8rem;
 
     ${media.thone`padding-top: 4rem;`};
 `;

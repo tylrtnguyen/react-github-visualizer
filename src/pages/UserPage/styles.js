@@ -15,6 +15,15 @@ export const StyledContainer = styled.div`
     `};
 `;
 
+export const StyledSectionHeader = styled.span`
+    text-align: center;
+    font-family: Poppins-Medium;
+    font-size: ${typeScale.h3};
+    ${media.phablet`
+        font-size: ${typeScale.h5};
+    `}
+`;
+
 export const StyledSideBar = styled.div`
     height: 100vh;
     padding: 1.5rem;
@@ -26,12 +35,11 @@ export const StyledSideBar = styled.div`
         width: 100%;
         height: auto;
     `};
-`
+`;
 
 export const StyledContent = styled.div`
-    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
     height: 100vh;
-    ${media.phablet`
-        padding: 1rem;
-    `};
-`
+`;
