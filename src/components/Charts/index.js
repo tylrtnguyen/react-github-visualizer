@@ -94,6 +94,7 @@ const Charts = ({langData, repoData, username}) => {
             initStarChart();
             initDoughnutChart();
         }
+        // eslint-disable-next-line
     }, [])
 
     const chartSize = 300;

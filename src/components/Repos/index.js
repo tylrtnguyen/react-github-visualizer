@@ -50,8 +50,10 @@ const Repos = ({ repoData }) => {
         if(repoData.length) {
             getTopRepos();
         }
+        // eslint-disable-next-line
     }, [])
 
+    // eslint-disable-next-line
     useEffect(() => getTopRepos(sortType), [sortType]);
 
     const toggleDropdown = () => setDropdownOpen(!dropdownOpen);

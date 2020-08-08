@@ -17,4 +17,8 @@ const RateLimit = ({ rateLimit }) => (
     </StyledWrapper>
 )
 
+RateLimit.propTypes = {
+    rateLimit: PropTypes.object.isRequired,
+};
+
 export default RateLimit;
