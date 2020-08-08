@@ -18,7 +18,7 @@ const IndexPage = () => {
                     history.push(`/user/${username}`)
                 }}
             >
-                <label htmlFor="username">Search a GitHub User</label>
+                <label htmlFor="username">GitHub Profile Visualizer</label>
                 <input name="username" type="text" placeholder="GitHub username here" onChange={handleChange} />
                 <button disabled={username===''} className="submit" type="submit">Submit <NextIcon /></button>
 

@@ -18,7 +18,7 @@ export const StyledContainer = styled.div`
         label {
             display: block;
             font-family: Poppins-SemiBold;
-            font-size: ${typeScale.h1};
+            font-size: ${typeScale.h2};
             margin: 1rem;
             ${media.phablet`
                 font-size: ${typeScale.h3};

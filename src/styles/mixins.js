@@ -26,7 +26,6 @@ const mixins = {
         width: 100%;
         max-width: 500px;
         padding: 1rem;
-        margin-left: 20px;
         text-decoration: none;
         color: ${colors.white};
         font-size: ${typeScale.h5};
