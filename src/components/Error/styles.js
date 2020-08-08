@@ -30,11 +30,11 @@ export const StyledError = styled.div`
 
 export const StyledStatusCode = styled.h1`
     font-family: Poppins-Bold;
-    font-size: 230px;
+    font-size: 240px;
     font-weight: 900;
     margin: 0px;
     text-transform: uppercase;
-    letter-spacing: -40px;
+    letter-spacing: -10px;
     margin-left: -20px;
     span {
         text-shadow: -8px 0px 0px ${colors.white};
