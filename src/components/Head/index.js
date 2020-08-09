@@ -24,7 +24,7 @@ const Head = (props) => (
         <meta name="og:title" content={props.title || defaultTitle} />
         <meta name="og:description" content={props.description || defaultDescription} />
         <meta name="og:image" content={props.ogImage || defaultOGImage} />
-        <meta name="og:image:width" content="1200" />
+        <meta name="og:image:width" content="1225" />
         <meta name="og:image:height" content="630" />
         {/* Twitter section */}
         <meta name="twitter:site" content={props.url || defaultOGURL} />
