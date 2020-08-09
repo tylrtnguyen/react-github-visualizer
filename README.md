@@ -1,4 +1,4 @@
-<h2 align="center">GitHub Profile Visualizer</2>
+<h2 align="center">GitHub Profile Visualizer</h2>
 
 <p align="center">
   <a href="https://app.netlify.com/sites/github-visualizer/deploys" target="_blank" />
@@ -6,6 +6,8 @@
 </p>
 
 <img src="./public/og.png" alt="Application Demo">
+
+
 
 ## 🚀 Quick start
 
