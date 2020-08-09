@@ -23,12 +23,10 @@ const UserPage = props => {
             if(!response) {
                 setError({ active: true, status: 404, message: 'User not found!'})
             }
-            console.log(response.data);
             setUserData(response.data);
         } 
         catch (err) {
             setError({active: true, status: 400, message: 'Something wrong happened!'});
-            console.error('Error:',err)
         }
         
     }
@@ -43,7 +41,7 @@ const UserPage = props => {
         }
         catch (err) {
             setError({ active: true, status: 400, message: 'Something wrong happend!'});
-            console.error('Error:',err)
+            console.log('Error:',err)
         }
         
     }
@@ -73,7 +71,7 @@ const UserPage = props => {
             console.log(response);
         } catch (err) {
             setError({active: true, status: 400, message: 'Something wrong happened!'})
-            console.error('Error:',err)
+            console.log('Error:',err)
         }
         
     }

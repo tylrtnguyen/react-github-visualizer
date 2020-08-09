@@ -14,7 +14,7 @@ const App = () => {
                 <Switch>
                     <Route exact path="/" component={IndexPage} />
                     <Route exact path="/user/:username" component={UserPage} />
-                    <Route path="*">
+                    <Route>
                         <Error error={{active: true, status: 404, message: "Page not found!"}} />
                     </Route>
                 </Switch>

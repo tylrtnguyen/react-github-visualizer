@@ -94,7 +94,7 @@ const Repos = ({ repoData }) => {
             <StyledGrid>
                         {topRepos.map(repo => (
                             <StyledRepo key={repo.id} as="a" href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                            <FlipMove typeName={null}>
+                            <FlipMove>
                                 <FunctionalCard>
                                     <StyledContent>
                                         <StyledStatSection>
